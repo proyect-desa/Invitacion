@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>El farol de Xiomara · XV Años</title>
+  <style>
+    /* RESET Y BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #9c89b8;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+    }
+
+    /* TARJETA PRINCIPAL */
+    .invitacion {
+      max-width: 360px;
+      width: 100%;
+      background: #fff9f7;
+      box-shadow: 0 15px 30px rgba(90, 60, 80, 0.25);
+      border: 2px solid #d4af37;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* DECORACIÓN GENERAL */
+    .decoracion-total {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      right: 8px;
+      bottom: 8px;
+      border: 1px dashed #e6b8af;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .decoracion-total::after {
+      content: "◈ ◈ ◈ ◈ ◈";
+      position: absolute;
+      bottom: -5px;
+      right: 15px;
+      color: #d4af37;
+      opacity: 0.2;
+      font-size: 1.2rem;
+      letter-spacing: 6px;
+      transform: rotate(-3deg);
+      white-space: nowrap;
+    }
+
+    /* CONTENIDO PRINCIPAL */
+    .contenido {
+      padding: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BLOQUES */
+    .bloque {
+      padding: 22px 18px;
+      border-bottom: 2px dotted #e6b8af;
+    }
+
+    .bloque:last-child {
+      border-bottom: none;
+    }
+
+    /* FONDOS CÁLIDOS */
+    .bloque-1 {
+      background: #fff0e5;
+    }
+
+    .bloque-2 {
+      background: #ffe4e9;
+    }
+
+    .bloque-3 {
+      background: #fae6e0;
+    }
+
+    .bloque-4 {
+      background: #f3e4e8;
+    }
+
+    .bloque-5 {
+      background: #f5dbd5;
+    }
+
+    .bloque-6 {
+      background: #fcf0e0;
+    }
+
+    .bloque-7 {
+      background: #faeadc;
+    }
+
+    .bloque-8 {
+      background: #f2d5d4;
+    }
+
+    .bloque-9 {
+      background: #ecd3d4;
+    }
+
+    .bloque-10 {
+      background: #eedbe0;
+    }
+
+    .bloque-11 {
+      background: #ebd3db;
+    }
+
+    .bloque-12 {
+      background: #f8e7e0;
+    }
+
+    /* TIPOGRAFÍA */
+    .titulo-principal {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.2rem;
+      color: #b47b89;
+      line-height: 1.1;
+      text-align: center;
+      text-shadow: 2px 2px 0 #fce6d8;
+      margin-bottom: 8px;
+    }
+
+    .subtitulo {
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: #7e5a9c;
+      text-transform: uppercase;
+      text-align: center;
+      border-top: 2px solid #d4af37;
+      border-bottom: 2px solid #d4af37;
+      padding: 6px 0;
+      width: 100%;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    /* NOMBRE PRINCIPAL */
+    .nombre-container {
+      text-align: center;
+    }
+
+    .nombre-grande {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #d4af37;
+      line-height: 1.1;
+      margin: 0;
+      text-shadow: 3px 3px 0 #fadacf;
+      word-break: break-word;
+    }
+
+    /* FOTOS */
+    .foto-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .foto-marco {
+      width: min(220px, 85%);
+      height: auto;
+      border: 3px solid #d4af37;
+      background: #ffe7dc;
+      box-shadow: 8px 8px 0 #b8a1c7, -4px -4px 0 #fbe6dc;
+      overflow: hidden;
+    }
+
+    .foto-marco-cuerpo {
+      aspect-ratio: 20/28;
+    }
+
+    .foto-marco-cuadrada {
+      aspect-ratio: 1/1;
+      width: min(160px, 70%);
+      margin: 0 auto;
+    }
+
+    .foto-marco img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .foto-cuerpo-completo {
+      object-position: center 20%;
+    }
+
+    /* FECHA */
+    .fecha-container {
+      text-align: center;
+    }
+
+    .fecha-numero {
+      font-size: 3.2rem;
+      font-weight: 600;
+      color: #7d5771;
+      background: #fff0e5;
+      padding: 4px 20px;
+      display: inline-block;
+      border: 2px solid #d4af37;
+      box-shadow: 5px 5px 0 #9c89b8;
+    }
+
+    .fecha-texto {
+      font-size: 1.6rem;
+      color: #8a6fb8;
+      margin: 5px 0 0;
+      letter-spacing: 5px;
+      font-weight: bold;
+    }
+
+    .fecha-ano {
+      font-size: 2rem;
+      color: #b1808b;
+      border-top: 2px dashed #d4af37;
+      padding-top: 6px;
+      margin-top: 6px;
+    }
+
+    /* REPRODUCTOR */
+    .reproductor-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #ecd3d4;
+      padding: 12px 16px;
+      border: 2px solid #d4af37;
+      box-shadow: 5px 5px 0 #9c89b8;
+      gap: 10px;
+    }
+
+    .cancion-info {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .nota-musical {
+      font-size: 1.8rem;
+      color: #d4af37;
+      flex-shrink: 0;
+    }
+
+    .cancion-detalle strong {
+      font-size: 1rem;
+      color: #774d64;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .cancion-detalle span {
+      font-size: 0.7rem;
+      color: #a47487;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .btn-play {
+      width: 44px;
+      height: 44px;
+      background: #d4af37;
+      border: 2px solid #9e7e5c;
+      font-size: 1.2rem;
+      color: #3f2c35;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 #9c89b8;
+      transition: 0.1s;
+      flex-shrink: 0;
+    }
+
+    .btn-play:active {
+      transform: translate(3px, 3px);
+      box-shadow: none;
+    }
+
+    #audio-player {
+      display: none;
+    }
+
+    /* LUGAR Y HORA */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .info-item {
+      background: #fae6e0;
+      padding: 14px 6px;
+      text-align: center;
+      border: 2px solid #d4af37;
+      box-shadow: 4px 4px 0 #9c89b8;
+    }
+
+    .info-icono {
+      font-size: 1.5rem;
+      color: #d4af37;
+      margin-bottom: 4px;
+    }
+
+    .info-label {
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      color: #a56d78;
+      text-transform: uppercase;
+      border-bottom: 2px dotted #e6b8af;
+      padding-bottom: 4px;
+      margin-bottom: 4px;
+      font-weight: bold;
+    }
+
+    .info-valor {
+      font-size: 1rem;
+      color: #764d64;
+      word-break: break-word;
+      font-weight: 500;
+    }
+
+    /* CONTADOR */
+    .contador-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .contador-item {
+      background: #fcedea;
+      padding: 12px 2px;
+      text-align: center;
+      border: 2px solid #d4af37;
+      box-shadow: 3px 3px 0 #9c89b8;
+    }
+
+    .contador-numero {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #d4af37;
+      font-family: 'Courier New', monospace;
+    }
+
+    .contador-texto {
+      font-size: 0.6rem;
+      letter-spacing: 1px;
+      color: #9f6d7b;
+      text-transform: uppercase;
+      border-top: 2px solid #e6b8af;
+      padding-top: 3px;
+      margin-top: 3px;
+    }
+
+    /* TEXTO FLUIDO */
+    .texto-centrado {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #6c4e5e;
+    }
+
+    .texto-grande {
+      font-size: 1.2rem;
+      color: #8b6278;
+      font-style: italic;
+      font-weight: 500;
+    }
+
+    .texto-destacado {
+      color: #b27e8f;
+      font-family: 'Brush Script MT', cursive;
+      font-size: 1.6rem;
+      font-weight: 400;
+      display: block;
+      margin: 8px 0;
+    }
+
+    /* DECORACIONES INTERNAS */
+    .decoracion-linea {
+      height: 2px;
+      background: repeating-linear-gradient(90deg, #d4af37 0px, #d4af37 6px, #b8a1c7 6px, #b8a1c7 12px);
+      margin: 8px 0 12px;
+    }
+
+    .decoracion-cuadros {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .decoracion-cuadros span {
+      width: 12px;
+      height: 12px;
+      border: 2px solid #d4af37;
+      transform: rotate(45deg);
+      background: #fbe6dc;
+    }
+
+    /* QR */
+    .qr-container {
+      background: #fae1da;
+      padding: 15px;
+      border: 2px solid #d4af37;
+      box-shadow: 4px 4px 0 #9c89b8;
+      text-align: center;
+    }
+
+    .qr-container p {
+      font-size: 1.1rem;
+      color: #764765;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .qr-container img {
+      width: 100px;
+      height: 100px;
+      display: block;
+      margin: 0 auto;
+      border: 2px solid #b8a1c7;
+    }
+
+    /* BOTONES DE ASISTENCIA - CON CAMPO DE NOMBRE */
+    .asistencia-container {
+      background: #fae1da;
+      padding: 20px;
+      border: 2px solid #d4af37;
+      box-shadow: 4px 4px 0 #9c89b8;
+      text-align: center;
+    }
+
+    .asistencia-titulo {
+      font-size: 1.2rem;
+      color: #764765;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    /* CAMPO DE NOMBRE */
+    .campo-nombre {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .campo-nombre label {
+      display: block;
+      font-size: 0.85rem;
+      color: #764765;
+      margin-bottom: 5px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .campo-nombre input {
+      width: 100%;
+      padding: 12px 15px;
+      border: 2px solid #d4af37;
+      background: #fff9f7;
+      font-size: 1rem;
+      color: #4a3b6e;
+      outline: none;
+      box-shadow: 3px 3px 0 #9c89b8;
+    }
+
+    .campo-nombre input:focus {
+      border-color: #b8a1c7;
+      box-shadow: 3px 3px 0 #b8a1c7;
+    }
+
+    .campo-nombre input::placeholder {
+      color: #c9a9b4;
+      font-style: italic;
+      font-size: 0.9rem;
+    }
+
+    .botones-asistencia {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    .btn-asistencia {
+      padding: 12px 30px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      border: 2px solid #d4af37;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 3px 3px 0 #9c89b8;
+    }
+
+    .btn-si {
+      background: #a8d5ba;
+      color: #2d5a3c;
+    }
+
+    .btn-si:hover {
+      background: #8bc34a;
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 #9c89b8;
+    }
+
+    .btn-si.seleccionado {
+      background: #4caf50;
+      color: white;
+      box-shadow: 1px 1px 0 #9c89b8;
+      transform: translate(2px, 2px);
+    }
+
+    .btn-no {
+      background: #f8d7da;
+      color: #721c24;
+    }
+
+    .btn-no:hover {
+      background: #f5c6cb;
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 #9c89b8;
+    }
+
+    .btn-no.seleccionado {
+      background: #dc3545;
+      color: white;
+      box-shadow: 1px 1px 0 #9c89b8;
+      transform: translate(2px, 2px);
+    }
+
+    .btn-enviar {
+      background: #d4af37;
+      color: #3f2c35;
+      border: 2px solid #9e7e5c;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 #9c89b8;
+      margin-top: 10px;
+      width: 100%;
+      transition: 0.1s;
+    }
+
+    .btn-enviar:active {
+      transform: translate(3px, 3px);
+      box-shadow: none;
+    }
+
+    .btn-enviar:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .mensaje-confirmacion {
+      margin-top: 15px;
+      padding: 10px;
+      font-size: 0.9rem;
+      border-radius: 0;
+      display: none;
+    }
+
+    .mensaje-confirmacion.exito {
+      background: #d4edda;
+      color: #155724;
+      border: 2px solid #c3e6cb;
+      display: block;
+    }
+
+    .mensaje-confirmacion.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 2px solid #f5c6cb;
+      display: block;
+    }
+
+    /* PIE */
+    .pie-frase {
+      font-size: 1.1rem;
+      color: #683f58;
+      font-style: italic;
+      text-align: center;
+      border-top: 3px double #d4af37;
+      padding-top: 16px;
+      margin-top: 0;
+      font-weight: 500;
+    }
+
+    .pie-frase div {
+      font-size: 1.8rem;
+      letter-spacing: 6px;
+      color: #d4af37;
+      margin-bottom: 6px;
+    }
+
+    /* AJUSTES RESPONSIVOS */
+    @media (max-width: 340px) {
+      .bloque {
+        padding: 18px 14px;
+      }
+
+      .nombre-grande {
+        font-size: 2.4rem;
+      }
+
+      .fecha-numero {
+        font-size: 2.6rem;
+        padding: 4px 15px;
+      }
+
+      .fecha-texto {
+        font-size: 1.4rem;
+        letter-spacing: 4px;
+      }
+
+      .fecha-ano {
+        font-size: 1.8rem;
+      }
+
+      .contador-numero {
+        font-size: 1.4rem;
+      }
+
+      .info-grid {
+        gap: 8px;
+      }
+
+      .qr-container img {
+        width: 80px;
+        height: 80px;
+      }
+
+      .foto-marco-cuadrada {
+        width: min(130px, 60%);
+      }
+
+      .botones-asistencia {
+        gap: 10px;
+      }
+
+      .btn-asistencia {
+        padding: 10px 20px;
+      }
+
+      .campo-nombre input {
+        padding: 10px 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="invitacion">
+    <div class="decoracion-total"></div>
+    <div class="contenido">
+
+      <!-- BLOQUE 1: CABECERA -->
+      <div class="bloque bloque-1" style="padding-top: 28px;">
+        <div class="decoracion-cuadros">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="titulo-principal">Un farol en honor a Xiomara</div>
+        <div class="subtitulo">una noche mágica y llena de sorpresas</div>
+        <div class="decoracion-linea" style="margin-top: 12px;"></div>
+      </div>
+
+      <!-- BLOQUE 2: HISTORIA -->
+      <div class="bloque bloque-2">
+        <div class="texto-centrado">
+          Había una vez una niña con una sonrisa capaz de iluminar cualquier torre.
+          <span class="texto-destacado">Xiomara Coca Jare</span>
+          hoy cumple 15 años y quiere compartir su luz con ustedes.
+          Ella y sus padres Yossy Danira Jare Gotita <br>
+          Jorge Alcides Coca Mendoza te invitan a acompañarla en este gran día.
+        </div>
+      </div>
+
+      <!-- BLOQUE 3: INVITACIÓN DIRECTA -->
+      <div class="bloque bloque-3">
+        <div class="texto-grande" style="text-align: center;">
+          "Te invito a iluminar conmigo esta noche mágica"
+        </div>
+      </div>
+
+      <!-- BLOQUE 4: NOMBRE -->
+      <div class="bloque bloque-4">
+        <div class="nombre-container">
+          <div class="nombre-grande">Xiomara Jazmin</div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 5: PRIMERA FOTO -->
+      <div class="bloque bloque-5">
+        <div class="foto-container">
+          <div class="foto-marco foto-marco-cuerpo">
+            <img
+              src="https://www.dropbox.com/scl/fi/7zuclj6kktzko896jksg9/WhatsApp-Image-2026-02-27-at-16.30.49-1.jpeg?rlkey=jk4qye4esci6qww37s45w47hg&st=w58pu1so&dl=1"
+              alt="Xiomara" class="foto-cuerpo-completo">
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- BLOQUE 7: FECHA -->
+      <div class="bloque bloque-6">
+        <div class="fecha-container">
+          <div class="fecha-numero">06 · 03</div>
+          <div class="fecha-texto">MARZO</div>
+          <div class="fecha-ano">2026</div>
+        </div>
+        <div style="text-align: center; margin-top: 8px; color: #986f7a; font-size: 0.9rem;">
+          la noche en que los faroles brillan
+        </div>
+      </div>
+
+      <!-- BLOQUE 8: REPRODUCTOR -->
+      <div class="bloque bloque-7">
+        <div class="reproductor-container">
+          <div class="cancion-info">
+            <span class="nota-musical">♪</span>
+            <div class="cancion-detalle">
+              <strong>"I See the Light"</strong>
+              <span>Enredados · Veo la luz</span>
+            </div>
+          </div>
+          <button class="btn-play" id="playPauseBtn">▶</button>
+        </div>
+      </div>
+
+      <audio id="audio-player" loop preload="auto">
+        <source
+          src="https://www.dropbox.com/scl/fi/x2myhr44tptty0ja4gpvz/Enredados-Veo-en-ti-la-luz-Letra.mp3?rlkey=ok6svmwayrurrtcclqz5sntqg&st=gv2wlt7y&dl=1"
+          type="audio/mpeg">
+      </audio>
+
+      <!-- BLOQUE 9: LUGAR Y HORA -->
+      <div class="bloque bloque-8">
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icono">◈</div>
+            <div class="info-label">Dress code</div>
+            <div class="info-valor">Formal</div>
+          </div>
+          <div class="info-item">
+            <div class="info-icono">◈</div>
+            <div class="info-label">Lugar</div>
+            <div class="info-valor">Sede de los docentes</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 10: CONTADOR -->
+      <div class="bloque bloque-9">
+        <div
+          style="text-align: center; letter-spacing: 3px; color: #875b6d; margin-bottom: 10px; font-size: 0.9rem; font-weight: bold;">
+          faltan
+        </div>
+        <div class="contador-grid" id="contador">
+          <div class="contador-item">
+            <div class="contador-numero" id="dias">00</div>
+            <div class="contador-texto">días</div>
+          </div>
+          <div class="contador-item">
+            <div class="contador-numero" id="horas">00</div>
+            <div class="contador-texto">horas</div>
+          </div>
+          <div class="contador-item">
+            <div class="contador-numero" id="minutos">00</div>
+            <div class="contador-texto">min</div>
+          </div>
+          <div class="contador-item">
+            <div class="contador-numero" id="segundos">00</div>
+            <div class="contador-texto">seg</div>
+          </div>
+        </div>
+        <div style="text-align: center; color: #9f6d7b; margin-top: 8px; font-size: 0.85rem;">
+          para que asciendan los faroles
+        </div>
+      </div>
+
+      <!-- BLOQUE 11: QR -->
+      <div class="bloque bloque-10">
+        <div class="qr-container">
+          <p>Sugerencia de obsequio:</p>
+          <img
+            src="https://www.dropbox.com/scl/fi/s0eb12s1xk4fs6x03590b/WhatsApp-Image-2026-02-27-at-14.15.34.jpeg?rlkey=w6d3o65dzex98l2uh19js77r5&st=jmnjk0q6&dl=1"
+            alt="QR">
+        </div>
+      </div>
+      <!-- BLOQUE 6: SEGUNDA FOTO -->
+      <div class="bloque bloque-12">
+        <div class="foto-container">
+          <div class="foto-marco foto-marco-cuadrada">
+            <img
+              src="https://www.dropbox.com/scl/fi/l6gxokqixuak7kay99svh/WhatsApp-Image-2026-02-27-at-16.30.49.jpeg?rlkey=qwtcszxgjqk6pppn77ds45sz1&st=1zanko5w&dl=1"
+              alt="Xiomara">
+          </div>
+        </div>
+      </div>
+      <!-- BLOQUE 12: CONFIRMACIÓN DE ASISTENCIA CON NOMBRE -->
+      <div class="bloque bloque-10">
+        <div class="asistencia-container">
+          <div class="asistencia-titulo">✨ Confirma tu asistencia ✨</div>
+
+          <!-- CAMPO DE NOMBRE -->
+          <div class="campo-nombre">
+            <label for="nombreInvitado">Tu nombre:</label>
+            <input type="text" id="nombreInvitado" placeholder="Escribe tu nombre completo" autocomplete="off">
+          </div>
+
+          <div class="botones-asistencia">
+            <button class="btn-asistencia btn-si" id="btnSi" onclick="seleccionarAsistencia('si')">SÍ</button>
+            <button class="btn-asistencia btn-no" id="btnNo" onclick="seleccionarAsistencia('no')">NO</button>
+          </div>
+
+          <button class="btn-enviar" id="btnEnviar" onclick="enviarAsistencia()" disabled>ENVIAR RESPUESTA</button>
+
+          <div style="margin-top: 15px; font-size: 0.8rem; color: #986f7a;">
+            <p>📱 O confirma por:</p>
+            <div style="display: flex; gap: 10px; justify-content: center; margin-top: 5px;">
+              <a href="whatsme/59162574751" onclick="enviarWhatsApp()"
+                style="color: #25D366; text-decoration: none;">WhatsApp</a> |
+              <a href="#" onclick="enviarEmail()" style="color: #D44638; text-decoration: none;">Email</a>
+            </div>
+          </div>
+
+          <div class="mensaje-confirmacion" id="mensajeConfirmacion"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // VARIABLES GLOBALES
+    let respuestaSeleccionada = null;
+    const fechaEvento = new Date(2026, 2, 6, 20, 0, 0);
+
+    // CONFIGURACIÓN - TUS DATOS
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzukLTyXvz5MtMBrO0o9P0wQI8V_7Vb1laOTrQlrW0KT6wpOzej71RZ0kzhd52jmTaD/exec';
+    const TELEFONO = '59162574751'; // Número sin espacios ni +
+    const EMAIL = 'zamycj@gmail.com';
+
+    // FUNCIÓN PARA SELECCIONAR ASISTENCIA
+    function seleccionarAsistencia(respuesta) {
+      respuestaSeleccionada = respuesta;
+
+      document.getElementById('btnSi').classList.remove('seleccionado');
+      document.getElementById('btnNo').classList.remove('seleccionado');
+
+      if (respuesta === 'si') {
+        document.getElementById('btnSi').classList.add('seleccionado');
+      } else {
+        document.getElementById('btnNo').classList.add('seleccionado');
+      }
+
+      // Habilitar botón solo si hay nombre también
+      validarFormulario();
+    }
+
+    // VALIDAR QUE TENGA NOMBRE Y RESPUESTA
+    function validarFormulario() {
+      const nombre = document.getElementById('nombreInvitado').value.trim();
+      if (nombre && respuestaSeleccionada) {
+        document.getElementById('btnEnviar').disabled = false;
+      } else {
+        document.getElementById('btnEnviar').disabled = true;
+      }
+    }
+
+    // ESCUCHAR CAMBIOS EN EL CAMPO NOMBRE
+    document.getElementById('nombreInvitado').addEventListener('input', validarFormulario);
+
+    // FUNCIÓN PARA ENVIAR A GOOGLE SHEETS
+    function enviarAsistencia() {
+      const nombre = document.getElementById('nombreInvitado').value.trim();
+
+      if (!nombre) {
+        mostrarMensaje('Por favor escribe tu nombre', 'error');
+        return;
+      }
+
+      if (!respuestaSeleccionada) {
+        mostrarMensaje('Por favor selecciona SÍ o NO', 'error');
+        return;
+      }
+
+      document.getElementById('btnEnviar').disabled = true;
+
+      const datos = {
+        nombre: nombre,
+        respuesta: respuestaSeleccionada === 'si' ? 'SÍ' : 'NO',
+        fecha: new Date().toLocaleString('es-BO', { timeZone: 'America/La_Paz' }),
+        evento: "XV Años Xiomara - 06/03/2026"
+      };
+
+      mostrarMensaje('Enviando respuesta...', 'exito');
+
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(datos)
+      })
+        .then(() => {
+          mostrarMensaje(`¡Gracias ${nombre} por confirmar! 🎉`, 'exito');
+          localStorage.setItem('asistenciaConfirmada', 'true');
+          localStorage.setItem('respuestaAsistencia', respuestaSeleccionada);
+          localStorage.setItem('nombreInvitado', nombre);
+
+          // Deshabilitar todo después de enviar
+          document.getElementById('nombreInvitado').disabled = true;
+          document.getElementById('btnSi').disabled = true;
+          document.getElementById('btnNo').disabled = true;
+        })
+        .catch(() => {
+          mostrarMensaje('Error. Usa WhatsApp o Email', 'error');
+          document.getElementById('btnEnviar').disabled = false;
+        });
+    }
+
+    // FUNCIONES DE RESPALDO
+    function enviarWhatsApp() {
+      const nombre = document.getElementById('nombreInvitado').value.trim();
+
+      if (!nombre) {
+        mostrarMensaje('Primero escribe tu nombre', 'error');
+        return;
+      }
+
+      if (!respuestaSeleccionada) {
+        mostrarMensaje('Primero selecciona SÍ o NO', 'error');
+        return;
+      }
+
+      const mensaje = `Hola, soy ${nombre}. Confirmo mi asistencia para los XV de Xiomara (06/03/2026): ${respuestaSeleccionada === 'si' ? '✅ SÍ asistiré' : '❌ NO podré asistir'}`;
+      window.open(`https://wa.me/${TELEFONO}?text=${encodeURIComponent(mensaje)}`, '_blank');
+      mostrarMensaje('¡Gracias por confirmar!', 'exito');
+    }
+
+    function enviarEmail() {
+      const nombre = document.getElementById('nombreInvitado').value.trim();
+
+      if (!nombre) {
+        mostrarMensaje('Primero escribe tu nombre', 'error');
+        return;
+      }
+
+      if (!respuestaSeleccionada) {
+        mostrarMensaje('Primero selecciona SÍ o NO', 'error');
+        return;
+      }
+
+      const asunto = 'Confirmación XV Xiomara';
+      const cuerpo = `Hola, soy ${nombre}.\n\nConfirmo mi asistencia para el 06/03/2026: ${respuestaSeleccionada === 'si' ? 'SÍ asistiré' : 'NO podré asistir'}`;
+      window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+      mostrarMensaje('¡Gracias por confirmar!', 'exito');
+    }
+
+    function mostrarMensaje(texto, tipo) {
+      const mensajeDiv = document.getElementById('mensajeConfirmacion');
+      mensajeDiv.textContent = texto;
+      mensajeDiv.className = 'mensaje-confirmacion ' + tipo;
+    }
+
+    // CONTADOR REGRESIVO
+    function actualizarContador() {
+      const ahora = new Date();
+      const diff = fechaEvento - ahora;
+
+      if (diff <= 0) {
+        document.getElementById('dias').innerText = '00';
+        document.getElementById('horas').innerText = '00';
+        document.getElementById('minutos').innerText = '00';
+        document.getElementById('segundos').innerText = '00';
+        return;
+      }
+
+      const s = Math.floor(diff / 1000);
+      document.getElementById('dias').innerText = Math.floor(s / 86400).toString().padStart(2, '0');
+      document.getElementById('horas').innerText = Math.floor((s % 86400) / 3600).toString().padStart(2, '0');
+      document.getElementById('minutos').innerText = Math.floor((s % 3600) / 60).toString().padStart(2, '0');
+      document.getElementById('segundos').innerText = (s % 60).toString().padStart(2, '0');
+    }
+
+    // REPRODUCTOR
+    const audio = document.getElementById('audio-player');
+    const btn = document.getElementById('playPauseBtn');
+    let reproduciendo = false;
+
+    audio.load();
+
+    btn.addEventListener('click', () => {
+      if (reproduciendo) {
+        audio.pause();
+        btn.innerText = '▶';
+        reproduciendo = false;
+      } else {
+        audio.play()
+          .then(() => {
+            reproduciendo = true;
+            btn.innerText = '⏸';
+          })
+          .catch(() => {
+            btn.innerText = '▶';
+            reproduciendo = false;
+          });
+      }
+    });
+
+    audio.addEventListener('ended', () => {
+      reproduciendo = false;
+      btn.innerText = '▶';
+    });
+
+    // INICIALIZACIÓN
+    actualizarContador();
+    setInterval(actualizarContador, 1000);
+
+    // RECUPERAR DATOS SI YA CONFIRMÓ ANTES
+    if (localStorage.getItem('asistenciaConfirmada') === 'true') {
+      const nombreGuardado = localStorage.getItem('nombreInvitado');
+      const respuestaAnterior = localStorage.getItem('respuestaAsistencia');
+
+      if (nombreGuardado) {
+        document.getElementById('nombreInvitado').value = nombreGuardado;
+        document.getElementById('nombreInvitado').disabled = true;
+      }
+
+      if (respuestaAnterior) {
+        seleccionarAsistencia(respuestaAnterior);
+        document.getElementById('btnSi').disabled = true;
+        document.getElementById('btnNo').disabled = true;
+      }
+
+      document.getElementById('btnEnviar').disabled = true;
+      mostrarMensaje(`Ya confirmaste tu asistencia${nombreGuardado ? ', ' + nombreGuardado : ''}. ¡Gracias! 🎉`, 'exito');
+    }
+  </script>
+</body>
+
+</html>
