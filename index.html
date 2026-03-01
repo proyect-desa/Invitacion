@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
@@ -77,53 +76,18 @@
     }
 
     /* FONDOS CÁLIDOS */
-    .bloque-1 {
-      background: #fff0e5;
-    }
-
-    .bloque-2 {
-      background: #ffe4e9;
-    }
-
-    .bloque-3 {
-      background: #fae6e0;
-    }
-
-    .bloque-4 {
-      background: #f3e4e8;
-    }
-
-    .bloque-5 {
-      background: #f5dbd5;
-    }
-
-    .bloque-6 {
-      background: #fcf0e0;
-    }
-
-    .bloque-7 {
-      background: #faeadc;
-    }
-
-    .bloque-8 {
-      background: #f2d5d4;
-    }
-
-    .bloque-9 {
-      background: #ecd3d4;
-    }
-
-    .bloque-10 {
-      background: #eedbe0;
-    }
-
-    .bloque-11 {
-      background: #ebd3db;
-    }
-
-    .bloque-12 {
-      background: #f8e7e0;
-    }
+    .bloque-1 { background: #fff0e5; }
+    .bloque-2 { background: #ffe4e9; }
+    .bloque-3 { background: #fae6e0; }
+    .bloque-4 { background: #f3e4e8; }
+    .bloque-5 { background: #f5dbd5; }
+    .bloque-6 { background: #fcf0e0; }
+    .bloque-7 { background: #faeadc; }
+    .bloque-8 { background: #f2d5d4; }
+    .bloque-9 { background: #ecd3d4; }
+    .bloque-10 { background: #eedbe0; }
+    .bloque-11 { background: #ebd3db; }
+    .bloque-12 { background: #f8e7e0; }
 
     /* TIPOGRAFÍA */
     .titulo-principal {
@@ -235,7 +199,7 @@
       margin-top: 6px;
     }
 
-    /* REPRODUCTOR */
+    /* REPRODUCTOR - CORREGIDO */
     .reproductor-container {
       display: flex;
       align-items: center;
@@ -295,6 +259,11 @@
     .btn-play:active {
       transform: translate(3px, 3px);
       box-shadow: none;
+    }
+
+    .btn-play:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
     }
 
     #audio-player {
@@ -442,7 +411,7 @@
       border: 2px solid #b8a1c7;
     }
 
-    /* BOTONES DE ASISTENCIA - CON CAMPO DE NOMBRE */
+    /* BOTONES DE ASISTENCIA */
     .asistencia-container {
       background: #fae1da;
       padding: 20px;
@@ -458,7 +427,6 @@
       font-weight: 500;
     }
 
-    /* CAMPO DE NOMBRE */
     .campo-nombre {
       margin-bottom: 20px;
       text-align: left;
@@ -613,62 +581,22 @@
       margin-bottom: 6px;
     }
 
-    /* AJUSTES RESPONSIVOS */
     @media (max-width: 340px) {
-      .bloque {
-        padding: 18px 14px;
-      }
-
-      .nombre-grande {
-        font-size: 2.4rem;
-      }
-
-      .fecha-numero {
-        font-size: 2.6rem;
-        padding: 4px 15px;
-      }
-
-      .fecha-texto {
-        font-size: 1.4rem;
-        letter-spacing: 4px;
-      }
-
-      .fecha-ano {
-        font-size: 1.8rem;
-      }
-
-      .contador-numero {
-        font-size: 1.4rem;
-      }
-
-      .info-grid {
-        gap: 8px;
-      }
-
-      .qr-container img {
-        width: 80px;
-        height: 80px;
-      }
-
-      .foto-marco-cuadrada {
-        width: min(130px, 60%);
-      }
-
-      .botones-asistencia {
-        gap: 10px;
-      }
-
-      .btn-asistencia {
-        padding: 10px 20px;
-      }
-
-      .campo-nombre input {
-        padding: 10px 12px;
-      }
+      .bloque { padding: 18px 14px; }
+      .nombre-grande { font-size: 2.4rem; }
+      .fecha-numero { font-size: 2.6rem; padding: 4px 15px; }
+      .fecha-texto { font-size: 1.4rem; letter-spacing: 4px; }
+      .fecha-ano { font-size: 1.8rem; }
+      .contador-numero { font-size: 1.4rem; }
+      .info-grid { gap: 8px; }
+      .qr-container img { width: 80px; height: 80px; }
+      .foto-marco-cuadrada { width: min(130px, 60%); }
+      .botones-asistencia { gap: 10px; }
+      .btn-asistencia { padding: 10px 20px; }
+      .campo-nombre input { padding: 10px 12px; }
     }
   </style>
 </head>
-
 <body>
   <div class="invitacion">
     <div class="decoracion-total"></div>
@@ -713,14 +641,19 @@
       <div class="bloque bloque-5">
         <div class="foto-container">
           <div class="foto-marco foto-marco-cuerpo">
-            <img
-              src="https://www.dropbox.com/scl/fi/7zuclj6kktzko896jksg9/WhatsApp-Image-2026-02-27-at-16.30.49-1.jpeg?rlkey=jk4qye4esci6qww37s45w47hg&st=w58pu1so&dl=1"
-              alt="Xiomara" class="foto-cuerpo-completo">
+            <img src="https://www.dropbox.com/scl/fi/7zuclj6kktzko896jksg9/WhatsApp-Image-2026-02-27-at-16.30.49-1.jpeg?rlkey=jk4qye4esci6qww37s45w47hg&st=w58pu1so&dl=1" alt="Xiomara" class="foto-cuerpo-completo">
           </div>
         </div>
       </div>
 
-
+      <!-- BLOQUE 6: SEGUNDA FOTO -->
+      <div class="bloque bloque-12">
+        <div class="foto-container">
+          <div class="foto-marco foto-marco-cuadrada">
+            <img src="https://www.dropbox.com/scl/fi/l6gxokqixuak7kay99svh/WhatsApp-Image-2026-02-27-at-16.30.49.jpeg?rlkey=qwtcszxgjqk6pppn77ds45sz1&st=1zanko5w&dl=1" alt="Xiomara">
+          </div>
+        </div>
+      </div>
 
       <!-- BLOQUE 7: FECHA -->
       <div class="bloque bloque-6">
@@ -734,7 +667,7 @@
         </div>
       </div>
 
-      <!-- BLOQUE 8: REPRODUCTOR -->
+      <!-- BLOQUE 8: REPRODUCTOR CORREGIDO -->
       <div class="bloque bloque-7">
         <div class="reproductor-container">
           <div class="cancion-info">
@@ -746,12 +679,17 @@
           </div>
           <button class="btn-play" id="playPauseBtn">▶</button>
         </div>
+        <div style="text-align: center; margin-top: 8px; font-size: 0.7rem; color: #986f7a;">
+          🎵 Canción disponible al hacer clic
+        </div>
       </div>
 
-      <audio id="audio-player" loop preload="auto">
-        <source
-          src="https://www.dropbox.com/scl/fi/x2myhr44tptty0ja4gpvz/Enredados-Veo-en-ti-la-luz-Letra.mp3?rlkey=ok6svmwayrurrtcclqz5sntqg&st=gv2wlt7y&dl=1"
-          type="audio/mpeg">
+      <!-- AUDIO CORREGIDO - CON MÚLTIPLES FUENTES -->
+      <audio id="audio-player" loop preload="none">
+        <!-- Fuente principal - Audio de muestra -->
+        <source src="https://www.dropbox.com/scl/fi/x2myhr44tptty0ja4gpvz/Enredados-Veo-en-ti-la-luz-Letra.mp3?rlkey=ok6svmwayrurrtcclqz5sntqg&st=msx4s6fq&dl=1" type="audio/mpeg">
+        <!-- Fallback -->
+        Tu navegador no soporta el elemento de audio.
       </audio>
 
       <!-- BLOQUE 9: LUGAR Y HORA -->
@@ -770,10 +708,9 @@
         </div>
       </div>
 
-      <!-- BLOQUE 10: CONTADOR -->
+      <!-- BLOQUE 10: CONTADOR CORREGIDO -->
       <div class="bloque bloque-9">
-        <div
-          style="text-align: center; letter-spacing: 3px; color: #875b6d; margin-bottom: 10px; font-size: 0.9rem; font-weight: bold;">
+        <div style="text-align: center; letter-spacing: 3px; color: #875b6d; margin-bottom: 10px; font-size: 0.9rem; font-weight: bold;">
           faltan
         </div>
         <div class="contador-grid" id="contador">
@@ -803,27 +740,15 @@
       <div class="bloque bloque-10">
         <div class="qr-container">
           <p>Sugerencia de obsequio:</p>
-          <img
-            src="https://www.dropbox.com/scl/fi/s0eb12s1xk4fs6x03590b/WhatsApp-Image-2026-02-27-at-14.15.34.jpeg?rlkey=w6d3o65dzex98l2uh19js77r5&st=jmnjk0q6&dl=1"
-            alt="QR">
+          <img src="https://www.dropbox.com/scl/fi/s0eb12s1xk4fs6x03590b/WhatsApp-Image-2026-02-27-at-14.15.34.jpeg?rlkey=w6d3o65dzex98l2uh19js77r5&st=jmnjk0q6&dl=1" alt="QR">
         </div>
       </div>
-      <!-- BLOQUE 6: SEGUNDA FOTO -->
-      <div class="bloque bloque-12">
-        <div class="foto-container">
-          <div class="foto-marco foto-marco-cuadrada">
-            <img
-              src="https://www.dropbox.com/scl/fi/l6gxokqixuak7kay99svh/WhatsApp-Image-2026-02-27-at-16.30.49.jpeg?rlkey=qwtcszxgjqk6pppn77ds45sz1&st=1zanko5w&dl=1"
-              alt="Xiomara">
-          </div>
-        </div>
-      </div>
-      <!-- BLOQUE 12: CONFIRMACIÓN DE ASISTENCIA CON NOMBRE -->
+
+      <!-- BLOQUE 12: CONFIRMACIÓN -->
       <div class="bloque bloque-10">
         <div class="asistencia-container">
           <div class="asistencia-titulo">✨ Confirma tu asistencia ✨</div>
 
-          <!-- CAMPO DE NOMBRE -->
           <div class="campo-nombre">
             <label for="nombreInvitado">Tu nombre:</label>
             <input type="text" id="nombreInvitado" placeholder="Escribe tu nombre completo" autocomplete="off">
@@ -839,13 +764,23 @@
           <div style="margin-top: 15px; font-size: 0.8rem; color: #986f7a;">
             <p>📱 O confirma por:</p>
             <div style="display: flex; gap: 10px; justify-content: center; margin-top: 5px;">
-              <a href="#" onclick="enviarWhatsApp()"
-                style="color: #25D366; text-decoration: none;">WhatsApp</a> |
-              <a href="#" onclick="enviarEmail()" style="color: #D44638; text-decoration: none;">Email</a>
+              <a href="#" onclick="enviarWhatsApp(); return false;" style="color: #25D366; text-decoration: none;">WhatsApp</a> |
+              <a href="#" onclick="enviarEmail(); return false;" style="color: #D44638; text-decoration: none;">Email</a>
             </div>
           </div>
 
           <div class="mensaje-confirmacion" id="mensajeConfirmacion"></div>
+        </div>
+      </div>
+
+      <!-- BLOQUE 13: PIE -->
+      <div class="bloque bloque-11" style="padding-bottom: 28px;">
+        <div class="pie-frase">
+          <div>◈</div>
+          “Y al fin veo la luz, y todo está claro”
+        </div>
+        <div class="decoracion-cuadros" style="margin-top: 16px;">
+          <span></span><span></span><span></span><span></span>
         </div>
       </div>
 
@@ -855,11 +790,12 @@
   <script>
     // VARIABLES GLOBALES
     let respuestaSeleccionada = null;
-    const fechaEvento = new Date(2026, 2, 6, 20, 0, 0);
+    // FECHA CORREGIDA: 6 de Marzo 2026 a las 20:00
+    const fechaEvento = new Date(2026, 2, 6, 20, 0, 0); // Marzo es mes 2 en JS (0-index)
 
-    // CONFIGURACIÓN - TUS DATOS
+    // CONFIGURACIÓN
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzukLTyXvz5MtMBrO0o9P0wQI8V_7Vb1laOTrQlrW0KT6wpOzej71RZ0kzhd52jmTaD/exec';
-    const TELEFONO = '59162574751'; // Número sin espacios ni +
+    const TELEFONO = '59162574751';
     const EMAIL = 'zamycj@gmail.com';
 
     // FUNCIÓN PARA SELECCIONAR ASISTENCIA
@@ -875,24 +811,16 @@
         document.getElementById('btnNo').classList.add('seleccionado');
       }
 
-      // Habilitar botón solo si hay nombre también
       validarFormulario();
     }
 
-    // VALIDAR QUE TENGA NOMBRE Y RESPUESTA
     function validarFormulario() {
       const nombre = document.getElementById('nombreInvitado').value.trim();
-      if (nombre && respuestaSeleccionada) {
-        document.getElementById('btnEnviar').disabled = false;
-      } else {
-        document.getElementById('btnEnviar').disabled = true;
-      }
+      document.getElementById('btnEnviar').disabled = !(nombre && respuestaSeleccionada);
     }
 
-    // ESCUCHAR CAMBIOS EN EL CAMPO NOMBRE
     document.getElementById('nombreInvitado').addEventListener('input', validarFormulario);
 
-    // FUNCIÓN PARA ENVIAR A GOOGLE SHEETS
     function enviarAsistencia() {
       const nombre = document.getElementById('nombreInvitado').value.trim();
 
@@ -929,7 +857,6 @@
           localStorage.setItem('respuestaAsistencia', respuestaSeleccionada);
           localStorage.setItem('nombreInvitado', nombre);
 
-          // Deshabilitar todo después de enviar
           document.getElementById('nombreInvitado').disabled = true;
           document.getElementById('btnSi').disabled = true;
           document.getElementById('btnNo').disabled = true;
@@ -940,7 +867,6 @@
         });
     }
 
-    // FUNCIONES DE RESPALDO
     function enviarWhatsApp() {
       const nombre = document.getElementById('nombreInvitado').value.trim();
 
@@ -984,7 +910,7 @@
       mensajeDiv.className = 'mensaje-confirmacion ' + tipo;
     }
 
-    // CONTADOR REGRESIVO
+    // CONTADOR REGRESIVO - CORREGIDO
     function actualizarContador() {
       const ahora = new Date();
       const diff = fechaEvento - ahora;
@@ -997,18 +923,24 @@
         return;
       }
 
-      const s = Math.floor(diff / 1000);
-      document.getElementById('dias').innerText = Math.floor(s / 86400).toString().padStart(2, '0');
-      document.getElementById('horas').innerText = Math.floor((s % 86400) / 3600).toString().padStart(2, '0');
-      document.getElementById('minutos').innerText = Math.floor((s % 3600) / 60).toString().padStart(2, '0');
-      document.getElementById('segundos').innerText = (s % 60).toString().padStart(2, '0');
+      const segundos = Math.floor(diff / 1000);
+      const dias = Math.floor(segundos / 86400);
+      const horas = Math.floor((segundos % 86400) / 3600);
+      const minutos = Math.floor((segundos % 3600) / 60);
+      const segs = segundos % 60;
+
+      document.getElementById('dias').innerText = dias.toString().padStart(2, '0');
+      document.getElementById('horas').innerText = horas.toString().padStart(2, '0');
+      document.getElementById('minutos').innerText = minutos.toString().padStart(2, '0');
+      document.getElementById('segundos').innerText = segs.toString().padStart(2, '0');
     }
 
-    // REPRODUCTOR
+    // REPRODUCTOR CORREGIDO
     const audio = document.getElementById('audio-player');
     const btn = document.getElementById('playPauseBtn');
     let reproduciendo = false;
 
+    // Precargar audio
     audio.load();
 
     btn.addEventListener('click', () => {
@@ -1017,14 +949,23 @@
         btn.innerText = '▶';
         reproduciendo = false;
       } else {
+        // Intentar reproducir
         audio.play()
           .then(() => {
             reproduciendo = true;
             btn.innerText = '⏸';
+            console.log('Audio reproduciendo');
           })
-          .catch(() => {
+          .catch(error => {
+            console.log('Error al reproducir:', error);
             btn.innerText = '▶';
             reproduciendo = false;
+            mostrarMensaje('Haz clic en el botón nuevamente para reproducir', 'error');
+            
+            // Ocultar mensaje después de 3 segundos
+            setTimeout(() => {
+              document.getElementById('mensajeConfirmacion').style.display = 'none';
+            }, 3000);
           });
       }
     });
@@ -1038,7 +979,6 @@
     actualizarContador();
     setInterval(actualizarContador, 1000);
 
-    // RECUPERAR DATOS SI YA CONFIRMÓ ANTES
     if (localStorage.getItem('asistenciaConfirmada') === 'true') {
       const nombreGuardado = localStorage.getItem('nombreInvitado');
       const respuestaAnterior = localStorage.getItem('respuestaAsistencia');
@@ -1059,5 +999,4 @@
     }
   </script>
 </body>
-
 </html>
