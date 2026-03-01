@@ -686,7 +686,48 @@
         <div class="subtitulo">una noche mágica y llena de sorpresas</div>
         <div class="decoracion-linea" style="margin-top: 12px;"></div>
       </div>
+      <!-- BLOQUE 8: REPRODUCTOR CORREGIDO -->
+      <div class="bloque bloque-7">
+        <div class="reproductor-container">
+          <div class="cancion-info">
+            <span class="nota-musical">♪</span>
+            <div class="cancion-detalle">
+              <strong>"I See the Light"</strong>
+              <span>Enredados · Veo la luz</span>
+            </div>
+          </div>
+          <button class="btn-play" id="playPauseBtn">▶</button>
+        </div>
+        <div style="text-align: center; margin-top: 8px; font-size: 0.7rem; color: #986f7a;">
+          🎵 Canción disponible al hacer clic
+        </div>
+      </div>
 
+      <!-- AUDIO CORREGIDO - CON MÚLTIPLES FUENTES -->
+      <audio id="audio-player" loop preload="none">
+        <!-- Fuente principal - Audio de muestra -->
+        <source
+          src="https://www.dropbox.com/scl/fi/x2myhr44tptty0ja4gpvz/Enredados-Veo-en-ti-la-luz-Letra.mp3?rlkey=ok6svmwayrurrtcclqz5sntqg&st=msx4s6fq&dl=1"
+          type="audio/mpeg">
+        <!-- Fallback -->
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+
+      <!-- BLOQUE 9: LUGAR Y HORA -->
+      <div class="bloque bloque-8">
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icono">◈</div>
+            <div class="info-label">Dress code</div>
+            <div class="info-valor">Formal</div>
+          </div>
+          <div class="info-item">
+            <div class="info-icono">◈</div>
+            <div class="info-label">Lugar</div>
+            <div class="info-valor">Sede de los docentes</div>
+          </div>
+        </div>
+      </div>
       <!-- BLOQUE 2: HISTORIA -->
       <div class="bloque bloque-2">
         <div class="texto-centrado">
@@ -735,49 +776,6 @@
         </div>
         <div style="text-align: center; margin-top: 8px; color: #986f7a; font-size: 0.9rem;">
           la noche en que los faroles brillan
-        </div>
-      </div>
-
-      <!-- BLOQUE 8: REPRODUCTOR CORREGIDO -->
-      <div class="bloque bloque-7">
-        <div class="reproductor-container">
-          <div class="cancion-info">
-            <span class="nota-musical">♪</span>
-            <div class="cancion-detalle">
-              <strong>"I See the Light"</strong>
-              <span>Enredados · Veo la luz</span>
-            </div>
-          </div>
-          <button class="btn-play" id="playPauseBtn">▶</button>
-        </div>
-        <div style="text-align: center; margin-top: 8px; font-size: 0.7rem; color: #986f7a;">
-          🎵 Canción disponible al hacer clic
-        </div>
-      </div>
-
-      <!-- AUDIO CORREGIDO - CON MÚLTIPLES FUENTES -->
-      <audio id="audio-player" loop preload="none">
-        <!-- Fuente principal - Audio de muestra -->
-        <source
-          src="https://www.dropbox.com/scl/fi/x2myhr44tptty0ja4gpvz/Enredados-Veo-en-ti-la-luz-Letra.mp3?rlkey=ok6svmwayrurrtcclqz5sntqg&st=msx4s6fq&dl=1"
-          type="audio/mpeg">
-        <!-- Fallback -->
-        Tu navegador no soporta el elemento de audio.
-      </audio>
-
-      <!-- BLOQUE 9: LUGAR Y HORA -->
-      <div class="bloque bloque-8">
-        <div class="info-grid">
-          <div class="info-item">
-            <div class="info-icono">◈</div>
-            <div class="info-label">Dress code</div>
-            <div class="info-valor">Formal</div>
-          </div>
-          <div class="info-item">
-            <div class="info-icono">◈</div>
-            <div class="info-label">Lugar</div>
-            <div class="info-valor">Sede de los docentes</div>
-          </div>
         </div>
       </div>
 
